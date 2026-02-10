@@ -11,6 +11,18 @@
         background-colour: white;
         border-radius: 10px;  
       }
+      
+      #high {
+        background-colour: #e74c3c;  
+      }
+      
+      #medium {
+        background-colour: #f39c12;
+      }
+      
+      #low {
+        background-colour: #3498db
+      }
     </style>
   </head>
   <body>
@@ -35,9 +47,9 @@
     <button>
       Sort by priority:
       <select>
-        <option value="high">High Priority</option>
-        <option value="medium">Medium Priority</option>
-        <option value="low">Low Priority</option>
+        <option id="high" value="high">High Priority</option>
+        <option id="medium" value="medium">Medium Priority</option>
+        <option id="low" value="low">Low Priority</option>
       </select>
     </button>
     </div>
