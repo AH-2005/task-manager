@@ -44,22 +44,20 @@
     <input type="text" placeholder="XX/XX/XX" id="dateField" name="date_field"><br><br>
       <input type="submit" value='Add Task'>
     </fieldset>
-    <button id="status">
-      Sort by status:
-    <select id="tasks">
+    
+      <label for="status">Sort by status:</label>
+    <select name="status" id="status">
       <option value="all">All</option>
       <option value="active">Active</option>
       <option value="complete">Complete</option>
     </select>
-    </button>
-    <button id="priority">
-      Sort by priority:
-      <select>
+    
+      <label for="priority">Sort by priority:</label>
+      <select name="priority" id="priority">
         <option value="high">High Priority</option>
         <option value="medium">Medium Priority</option>
         <option value="low">Low Priority</option>
       </select>
-    </button>
     </div>
   </body>
 </html>
