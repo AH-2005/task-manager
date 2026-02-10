@@ -2,8 +2,7 @@ html {
   background-color: rgb(105,105,105);
 }
 
-#titleField {
-  color: white;
+fieldset {
   background-color: rgb(40,40,40);
 }
 
