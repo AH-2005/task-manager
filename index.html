@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <title>Task Manager</title>
     <style>
-      form {
-        background-colour: rgb(128,128,128);
+      fieldset {
+        background-color: rgb(128,128,128);
         border-radius: 10px;  
       }
     </style>
@@ -17,13 +17,13 @@
     <div>
     <script src="index.js"></script>
     <h1>Task Management Dashboard</h1>
-    <form id="field">
+    <fieldset id="field">
     <input type="text" placeholder="Task Title" id="titleField" name="title_field"><br>
       <input type="text" placeholder="Description (optional)">
       <label for="dateField">Due Date</label>
     <input type="text" placeholder="XX/XX/XX" id="dateField" name="date_field"><br><br>
       <input type="submit" value='Add Task'>
-    </form>
+    </fieldset>
     
       <label for="status">Sort by status:</label>
     <select name="status" id="status">
