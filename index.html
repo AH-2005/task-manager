@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <title>Task Manager</title>
     <script>
-document.addEventListener("DOMContentLoaded", function addTask() {
+document.addEventListener("DOMContentLoaded", function () {
 //When the submit button is clicked:
 document.querySelector("[value='Add Task']").onclick =
-function () {
+function addTask () {
 
 const taskId = Math.floor(Math.random() * 10000) 
 const taskCard = {}
@@ -27,7 +27,16 @@ document.querySelector("#activeList").append("li")
 activeTasks.push(taskCard)
 activeCounter++
 document.querySelector("#activeCounter").innerHTML = activeCounter
-}});
+}
+  
+document.querySelector("[value='Add Task']").onclick = function () {
+if (document.querySelector("#titleField").value === "") {
+Document.querySelector("[value='Add Task']").disabled === true
+} else {
+Document.querySelector("[value='Add Task']").disabled === false
+}
+}
+});
     </script>
     <script src="index.js"></script>
     <style>
