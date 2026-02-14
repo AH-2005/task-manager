@@ -22,7 +22,7 @@ taskCard.id = taskId
 taskCard.priorityLevel = document.querySelector("#priorityLevel").value 
 taskCard.description = document.querySelector("#description").value
 taskCard.date = document.querySelector("#dateField").value 
-document.createElement("li").value = taskCard 
+document.createElement("li").innerHTML = taskCard 
 document.querySelector("#activeList").append("li")  
 activeTasks.push(taskCard)
 activeCounter++
