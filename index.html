@@ -16,6 +16,8 @@ const taskId = Math.floor(Math.random() * 10000)
 const taskCard = {}
 const activeCounter = 0 
 const completeCounter = 0
+const activeTasks = [];
+const completeTasks = [];
   
 taskCard.name = document.querySelector("#taskField").value
 taskCard.id = taskId
