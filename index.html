@@ -11,7 +11,7 @@ const activeCounter = 0
 const completeCounter = 0
 
 
-document.addEventListener("DOMContentLoaded", function addTask() => {
+document.addEventListener("DOMContentLoaded", function addTask() {
 document.querySelector("[value='Add Task']").onclick = () => {
 Const activeTask = document.createElement("li").innerHTML = document.querySelector("div").value 
 document.querySelector("#activeList").append(activeTask)
