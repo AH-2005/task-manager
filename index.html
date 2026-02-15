@@ -9,7 +9,7 @@
     <script>
 document.addEventListener("DOMContentLoaded", function () {
 //When the submit button is clicked:
-document.querySelector("[value='Add Task']").onclick =
+document.querySelector("#addTask").onclick =
 function () {
 
 const taskId = Math.floor(Math.random() * 10000) 
@@ -20,9 +20,9 @@ const activeTasks = [];
 const completeTasks = [];
   
   if (document.querySelector("#titleField").value === "") {
-document.querySelector("[value='Add Task']").disabled === true
+document.querySelector("#addTask").disabled === true
 } else {
-document.querySelector("[value='Add Task']").disabled === false
+document.querySelector("#addTask").disabled === false
   }
 taskCard.name = document.querySelector("#taskField").value
 taskCard.id = taskId
@@ -34,7 +34,6 @@ document.querySelector("#activeList").append("li")
 activeTasks.push(taskCard)
 activeCounter++
 document.querySelector("#activeCounter").innerHTML = activeCounter
-
 
 });
     </script>
