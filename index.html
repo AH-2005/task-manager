@@ -10,7 +10,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 //When the submit button is clicked:
 document.querySelector("[value='Add Task']").onclick =
-function addTask () {
+function () {
 
 const taskId = Math.floor(Math.random() * 10000) 
 const taskCard = {}
@@ -19,6 +19,11 @@ const completeCounter = 0
 const activeTasks = [];
 const completeTasks = [];
   
+  if (document.querySelector("#titleField").value === "") {
+document.querySelector("[value='Add Task']").disabled === true
+} else {
+document.querySelector("[value='Add Task']").disabled === false
+  }
 taskCard.name = document.querySelector("#taskField").value
 taskCard.id = taskId
 taskCard.priorityLevel = document.querySelector("#priorityLevel").value 
@@ -29,15 +34,8 @@ document.querySelector("#activeList").append("li")
 activeTasks.push(taskCard)
 activeCounter++
 document.querySelector("#activeCounter").innerHTML = activeCounter
-}
-  
-document.querySelector("[value='Add Task']").onclick = function () {
-if (document.querySelector("#titleField").value === "") {
-Document.querySelector("[value='Add Task']").disabled === true
-} else {
-Document.querySelector("[value='Add Task']").disabled === false
-}
-}
+
+
 });
     </script>
     <script src="index.js"></script>
