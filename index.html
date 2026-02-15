@@ -9,9 +9,14 @@
     <script>
 document.addEventListener("DOMContentLoaded", function () {
 //When the submit button is clicked:
-document.querySelector("form").onsubmit =
+document.querySelector("#addTask").onclick =
 function () {
-
+  
+if (document.querySelector("#titleField").value === "") {
+document.querySelector("#addTask").disabled === true
+} else {
+document.querySelector("#addTask").disabled === false
+}
 const taskId = Math.floor(Math.random() * 10000) 
 const taskCard = {}
 const activeCounter = 0 
@@ -19,11 +24,7 @@ const completeCounter = 0
 const activeTasks = [];
 const completeTasks = [];
   
-  if (document.querySelector("#titleField").value === "") {
-document.querySelector("#addTask").disabled === true
-} else {
-document.querySelector("#addTask").disabled === false
-  }
+  
 taskCard.name = document.querySelector("#taskField").value
 taskCard.id = taskId
 taskCard.priorityLevel = document.querySelector("#priorityLevel").value 
