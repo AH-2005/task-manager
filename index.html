@@ -17,7 +17,7 @@ if (document.querySelector("#titleField").value === "") {
 document.querySelector("#addTask").disabled === true
 } else {
 document.querySelector("#addTask").disabled === false
-}
+  
 const taskId = Math.floor(Math.random() * 10000) 
 const taskCard = {}
 const activeCounter = 0 
@@ -36,7 +36,7 @@ document.querySelector("#activeList").append("li")
 activeTasks.push(taskCard)
 activeCounter++
 document.querySelector("#activeCounter").innerHTML = activeCounter
-
+}
 });
     </script>
     <script src="index.js"></script>
