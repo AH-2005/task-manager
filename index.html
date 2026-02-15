@@ -24,7 +24,7 @@ taskCard.id = taskId
 taskCard.priorityLevel = document.querySelector("#priorityLevel").value 
 taskCard.description = document.querySelector("#description").value
 taskCard.date = document.querySelector("#dateField").value 
-document.createElement("li").append(Document.createTextNode(`${taskCard}`))
+document.createElement("li").append(document.createTextNode(`${taskCard}`))
 document.querySelector("#activeList").append("li")  
 activeTasks.push(taskCard)
 activeCounter++
