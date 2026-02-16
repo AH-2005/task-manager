@@ -34,9 +34,8 @@ taskCardObj.priorityLevel = document.querySelector("#priorityLevel").value
 taskCardObj.description = document.querySelector("#description").value
 taskCardObj.date = document.querySelector("#dateField").value 
 const newLi = document.createElement("li")
-const taskCard = document.createElement("fieldset")
-document.querySelector(newLi).append(document.createTextNode(`${taskCardObj}`))
-document.querySelector("#activeList").append("li")  
+newLi.textContent = `${taskCardObj.name}`
+document.body.append(document.querySelector("#activeList").append("li")) 
 activeTasks.push(taskCard)
 activeCounter++
 document.querySelector("#activeCounter").innerHTML = activeCounter
