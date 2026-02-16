@@ -21,19 +21,21 @@ document.querySelector("#addTask").disabled = false
   document.querySelector("#addTask").onclick = function ()  {
 
 const taskId = Math.floor(Math.random() * 10000) 
-const taskCard = {}
+const taskCardObj = {}
 const activeCounter = 0 
 const completeCounter = 0
 const activeTasks = [];
 const completeTasks = [];
   
   
-taskCard.name = document.querySelector("#titleField").value
-taskCard.id = taskId
-taskCard.priorityLevel = document.querySelector("#priorityLevel").value 
-taskCard.description = document.querySelector("#description").value
-taskCard.date = document.querySelector("#dateField").value 
-document.createElement("li").append(document.createTextNode(`${taskCard}`))
+taskCardObj.name = document.querySelector("#titleField").value
+taskCardObj.id = taskId
+taskCardObj.priorityLevel = document.querySelector("#priorityLevel").value 
+taskCardObj.description = document.querySelector("#description").value
+taskCardObj.date = document.querySelector("#dateField").value 
+const newLi = document.createElement("li")
+const taskCard = document.createElement("fieldset")
+document.querySelector(newLi).append(document.createTextNode(`${taskCardObj}`))
 document.querySelector("#activeList").append("li")  
 activeTasks.push(taskCard)
 activeCounter++
@@ -43,7 +45,7 @@ document.querySelector("#activeCounter").innerHTML = activeCounter
     </script>
     <script src="index.js"></script>
     <style>
-      fieldset {
+      #field {
         background-color: rgb(128,128,128);
         border-radius: 10px;  
         border-width: 5px;
