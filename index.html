@@ -14,9 +14,9 @@ document.querySelector("#addTask").onclick =
 function () {
   
 if (document.querySelector("#titleField").value.length === 0) {
-document.querySelector("#addTask").disabled === true
+document.querySelector("#addTask").disabled = true
 } else {
-document.querySelector("#addTask").disabled === false
+document.querySelector("#addTask").disabled = false
   
 const taskId = Math.floor(Math.random() * 10000) 
 const taskCard = {}
