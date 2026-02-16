@@ -35,7 +35,7 @@ taskCardObj.description = document.querySelector("#description").value
 taskCardObj.date = document.querySelector("#dateField").value 
 const newLi = document.createElement("li")
 newLi.textContent = `${taskCardObj.name}`
-document.body.append(document.querySelector("#activeList").append("li")) 
+document.body.append(document.querySelector("#activeList").append(newLi)) 
 activeTasks.push(taskCard)
 activeCounter++
 document.querySelector("#activeCounter").innerHTML = activeCounter
