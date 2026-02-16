@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.querySelector("#addTask").onclick =
 function () {
   
-if (document.querySelector("#titleField").value.length === 0) {
+if (!document.querySelector("#titleField").value.length > 0) {
 document.querySelector("#addTask").disabled = true
 } else {
 document.querySelector("#addTask").disabled = false
