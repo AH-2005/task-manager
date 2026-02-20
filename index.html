@@ -5,43 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Task Manager</title>
-    <script>
-document.addEventListener("DOMContentLoaded", function () {
-//When the submit button is clicked:
-  document.querySelector("#addTask").disabled = true
-document.querySelector("#titleField").onkeyup =
-function () {
-  
-if (!document.querySelector("#titleField").value.length > 0) {
-document.querySelector("#addTask").disabled = true
-} else {
-document.querySelector("#addTask").disabled = false
-}  
-  document.querySelector("#addTask").onclick = function ()  {
-
-const taskId = Math.floor(Math.random() * 10000) 
-const taskCardObj = {}
-const activeCounter = 0 
-const completeCounter = 0
-const activeTasks = [];
-const completeTasks = [];
-  
-  
-taskCardObj.name = document.querySelector("#titleField").value
-taskCardObj.id = taskId
-taskCardObj.priorityLevel = document.querySelector("#priorityLevel").value 
-taskCardObj.description = document.querySelector("#description").value
-taskCardObj.date = document.querySelector("#dateField").value 
-const newLi = document.createElement("li")
-newLi.textContent = `${taskCardObj.name}`
-document.body.append(document.querySelector("#activeList").append(newLi)) 
-activeTasks.push(taskCard)
-activeCounter++
-document.querySelector("#activeCounter").innerHTML = activeCounter
-  }
-});
-    </script>
     <script src="index.js"></script>
     <style>
       #field {
