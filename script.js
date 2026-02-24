@@ -22,5 +22,6 @@ let activeCounter = 0;
 
     let li = document.createElement("li")
     li.innerHTML = activeTask.name;
+    document.querySelector("#activeList").append(li);
   }
 })
